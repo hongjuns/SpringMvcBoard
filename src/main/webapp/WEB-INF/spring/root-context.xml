@@ -18,10 +18,11 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://127.0.0.1:3306/book_ex?useSSL=false&amp;serverTimezone=UTC"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/book_ex?serverTimezone=UTC"></property>
         <property name="username" value="root"></property>    
         <property name="password" value="zerock"></property>
     </bean>
+
 
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
@@ -43,6 +44,16 @@
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
 	</bean>
 	
+	 <bean id="googleConnectionFactory"
+          class="org.springframework.social.google.connect.GoogleConnectionFactory">
+        <constructor-arg value="1042506041229-dajid7hra76vl2enst92grv889pt62f4.apps.googleusercontent.com" />
+        <constructor-arg value="PcL4_73LmFALlcjmjDoMi3Ot" />
+    </bean>
+
+    <bean id="googleOAuth2Parameters" class="org.springframework.social.oauth2.OAuth2Parameters">
+        <property name="scope" value="https://www.googleapis.com/auth/plus.login" />
+        <property name="redirectUri" value="http://localhost:8080/login_project/oauth2callback" />
+    </bean>
 	
 
 	
