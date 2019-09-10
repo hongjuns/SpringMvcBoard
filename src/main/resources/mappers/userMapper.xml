@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.mapper.UserMapper">
+
+
+  <select id="login" resultType="org.zerock.domain.UserVO">
+ 
+  	select uid, upw, name from member where uid = #{uid} and upw = #{upw}
+  
+  </select>
+  
+  
+   <select id="SnsLoginCheck" resultType="String">
+  	select name from member where uid = #{id} 
+  </select>
+  
+   <select id="SnsLoginView" resultType="org.zerock.domain.UserVO">
+  	select uno,uid,name from member where uid = #{id} 
+  </select>
+  
+   <select id="memberlogin" resultType="org.zerock.domain.UserVO">
+  	select name from member where token = #{id} 
+  </select>
+  
+
+	<insert id="SnsLoginInsert">
+		insert into member (uid, name, token)
+		values(#{uid},#{name}, #{token})
+	</insert>
+	
+	<select id="FirstSnsLoginView" resultType="org.zerock.domain.UserVO">
+ 			select uno,uid,name FROM member where uno= LAST_INSERT_ID()
+	</select>
+
+</mapper>
+
+

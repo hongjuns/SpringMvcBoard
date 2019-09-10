@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zerock.mapper.MainMapper">
+
+	<select id="TodayCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and day(regdate) = day(now()); 
+	 ]]>  
+	 </select>
+	 
+	 <select id="MonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and month(regdate) = month(now());
+	 ]]>  
+	 </select>
+	 
+	 
+	 <select id="Mainlist" resultType="org.zerock.domain.BoardVO">
+	 <![CDATA[
+	 select 
+	   bno, title, content, writer, regdate 
+	 from 
+	   board 
+	 where bno > 0 and month(regdate) = month(now())
+	 order by bno desc, regdate desc
+	 limit 0, 4
+	 ]]>  
+	 </select>
+
+	
+</mapper>
