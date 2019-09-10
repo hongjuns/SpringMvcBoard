@@ -31,5 +31,35 @@ public class MainServiceImpl implements MainService {
 	  public int MonthCount() throws Exception {
 	    return dao.MonthCount();
 	  }
-
+	  
+	  @Override
+	  public int JultMonthCount() throws Exception {
+	    return dao.JultMonthCount();
+	  }
+	  
+	  @Override
+	  public int AugMonthCount() throws Exception {
+	    return dao.AugMonthCount();
+	  }
+	  
+	  @Override
+	  public int SeptMonthCount() throws Exception {
+	    return dao.SeptMonthCount();
+	  }
+	  
+	  @Override
+	  public int OctMonthCount() throws Exception {
+	    return dao.OctMonthCount();
+	  }
+	  
+	  @Override
+	  public int NovMonthCount() throws Exception {
+	    return dao.NovMonthCount();
+	  }
+	  
+	  @Override
+	  public int DecMonthCount() throws Exception {
+	    return dao.DecMonthCount();
+	  }
+	
 }

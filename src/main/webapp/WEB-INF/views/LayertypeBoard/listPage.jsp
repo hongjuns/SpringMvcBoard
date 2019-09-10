@@ -17,7 +17,7 @@
 					<h3 class="box-title">Board List</h3>
 				</div>
 				<div class='box-body'>
-					<button id='newBtn' style="background: #fff;width: 15%;border-radius: 10px;color: #333;padding:0.5%;">New Board</button>
+					<button id='newBtn' class="btn btn-primary">New Board</button>
 				</div>
 			</div>
 			<div class="box">

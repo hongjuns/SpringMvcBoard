@@ -26,6 +26,67 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	 </select>
 	 
 	 
+	<select id="JultMonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and regdate BETWEEN  '2019-07-01' and '2019-07-31'
+	 ]]>  
+	 </select>
+	 
+	 <select id="AugMonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and regdate BETWEEN  '2019-08-01' and '2019-08-31'
+	 ]]>  
+	 </select>
+	 
+	 <select id="SeptMonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and regdate BETWEEN  '2019-09-01' and '2019-09-30'
+	 ]]>  
+	 </select>
+	 
+	 <select id="OctMonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and regdate BETWEEN  '2019-10-01' and '2019-10-31'
+	 ]]>  
+	 </select>
+	 
+	 <select id="NovMonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and regdate BETWEEN  '2019-11-01' and '2019-11-30'
+	 ]]>  
+	 </select>
+	 
+	 <select id="DecMonthCount" resultType="int">
+	 <![CDATA[
+	 select 
+	   Count(bno) 
+	 from 
+	   board 
+	 where bno > 0 and regdate BETWEEN  '2019-12-01' and '2019-12-31'
+	 ]]>  
+	 </select>
+	 
+
 	 <select id="Mainlist" resultType="org.zerock.domain.BoardVO">
 	 <![CDATA[
 	 select 

@@ -43,6 +43,13 @@ public class HomeController {
 		model.addAttribute("list", service.Mainlist());
 		model.addAttribute("TodayCount",service.TodayCount());
 		model.addAttribute("MonthCount",service.MonthCount());
+		model.addAttribute("JultMonthCount",service.JultMonthCount());
+		model.addAttribute("AugMonthCount",service.AugMonthCount());
+		model.addAttribute("SeptMonthCount",service.SeptMonthCount());
+		model.addAttribute("OctMonthCount",service.OctMonthCount());
+		model.addAttribute("NovMonthCount",service.NovMonthCount());
+		model.addAttribute("DecMonthCount",service.DecMonthCount());
+
 		
 		return "home";
 	}

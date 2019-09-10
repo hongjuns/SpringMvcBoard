@@ -18,11 +18,11 @@
 
 			<div class="box">
 				<div class="box-header with-border">
-					<h3 class="box-title">LIST ALL PAGE</h3>
+					<h3 class="box-title">Main PAGE</h3>
 				</div>
 
 				<div class="box-body">
-					<div class="content">
+					<div class="content" style="display: flex;">
 						<div class="left" style="width:50%;float: left;"> 
 							<h2 style="text-align: center;"> 이달의 글쓴이</h2>
 							<table class="table">
@@ -48,8 +48,8 @@
 						</div>
 						<div class="right" style="width:50%;float:right;">
 							<h2 style="text-align: center;"> Board Count</h2>
-							<div style="background: #343a40; color: #fff; text-align: center;">
-						      <p class="card-text"> <b> 총 개수 </b></p>
+							<div style="background: #343a40; color: #fff; text-align: center;height:70%; font-size: 2rem;">
+						      <p class="card-text" style="padding-top: 5%;"> <b> 총 개수 </b></p>
 							  <p> Today : ${TodayCount} </p> 
 							  <p class="card-text"> <b> 이번달 개수 </b></p>
 							  <p> Today : ${MonthCount} </p>
@@ -68,7 +68,7 @@
 					        labels: ['07월', '08월', '09월', '10월', '11월', '12월'],
 					        datasets: [{
 					            label: '하반기 데이터',
-					            data: [12, 19, 3, 0, 0, 0],
+					            data: [${JultMonthCount}, ${AugMonthCount}, ${SeptMonthCount},${OctMonthCount}, ${NovMonthCount}, ${DecMonthCount}],
 					            backgroundColor: [
 					                'rgba(255, 99, 132, 0.2)',
 					                'rgba(255, 99, 132, 0.2)',
@@ -100,12 +100,13 @@
 					});
 					</script>
 					</div>		
-				</div>
 				<!-- /.box-body -->
 				<div class="box-footer">
 					<%@include file="include/footer.jsp"%>
 				</div>
 				<!-- /.box-footer-->
+				</div>
+				
 			</div>
 		</div>
 		<!--/.col (left) -->

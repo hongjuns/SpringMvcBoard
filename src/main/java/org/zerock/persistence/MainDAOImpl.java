@@ -28,10 +28,50 @@ public class MainDAOImpl implements MainDAO {
 	  
 	  }
 	  
+	  
 	  @Override
 	  public int MonthCount() throws Exception {
 
 	    return session.selectOne(namespace + ".MonthCount");
+	  
+	  }
+	  
+	  @Override
+	  public int JultMonthCount() throws Exception {
+
+	    return session.selectOne(namespace + ".JultMonthCount");
+	  
+	  }
+	  @Override
+	  public int AugMonthCount() throws Exception {
+
+	    return session.selectOne(namespace + ".AugMonthCount");
+	  
+	  }
+	  
+	  @Override
+	  public int SeptMonthCount() throws Exception {
+
+	    return session.selectOne(namespace + ".SeptMonthCount");
+	  
+	  }
+	  @Override
+	  public int OctMonthCount() throws Exception {
+
+	    return session.selectOne(namespace + ".OctMonthCount");
+	  
+	  }
+	  @Override
+	  public int NovMonthCount() throws Exception {
+
+	    return session.selectOne(namespace + ".NovMonthCount");
+	  
+	  }
+	  
+	  @Override
+	  public int DecMonthCount() throws Exception {
+
+	    return session.selectOne(namespace + ".DecMonthCount");
 	  
 	  }
 	  

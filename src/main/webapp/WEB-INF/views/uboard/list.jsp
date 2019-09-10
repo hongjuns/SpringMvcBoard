@@ -30,7 +30,7 @@ button {
 
 				<div class='box-body'>
 
-					<select name="searchType">
+					<select name="searchType"  class="form-control">
 						<option value="n"
 							<c:out value="${cri.searchType == null?'selected':''}"/>>
 							---</option>
@@ -52,10 +52,13 @@ button {
 						<option value="tcw"
 							<c:out value="${cri.searchType eq 'tcw'?'selected':''}"/>>
 							Title OR Content OR Writer</option>
-					</select> <input type="text" name='keyword' id="keywordInput" value='${cri.keyword }'>
-					<button id='searchBtn'>Search</button>
-					<button id='newBtn'>New Board</button>
-
+					</select> 
+					<input type="text" class="form-control" name='keyword' id="keywordInput" value='${cri.keyword }'>
+					<div style="padding-top:1%;   text-align: center;">
+						<button id='searchBtn' class="btn btn-primary " >Search</button>
+						<button id='newBtn' class="btn btn-primary">New Board</button>
+					</div>
+					
 				</div>
 			</div>
 
