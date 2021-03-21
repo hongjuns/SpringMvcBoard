@@ -18,7 +18,7 @@
 
 			<div class="box">
 				<div class="box-header with-border">
-					<h3 class="box-title">Main PAGE 20210321</h3>
+					<h3 class="box-title">Main PAGE 20210321_v1</h3>
 				</div>
 
 				<div class="box-body">
